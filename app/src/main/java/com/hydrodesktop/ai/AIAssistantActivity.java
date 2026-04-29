@@ -160,7 +160,7 @@ public class AIAssistantActivity extends AppCompatActivity {
         // 语音输入通过 VoiceRecognitionService 处理
         // 这里启动系统语音识别作为备选
         try {
-            android.content.Intent intent = new android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH;
+            android.content.Intent intent = new android.content.Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
             intent.putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                     android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
             intent.putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE, "zh-CN");
