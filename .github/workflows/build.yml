@@ -3,6 +3,8 @@ name: Android CI Build
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -18,37 +20,14 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     
-    - name: Create Gradle wrapper
-      run: |
-        if [ ! -f gradlew ] || [ ! -f gradle/wrapper/gradle-wrapper.jar ]; then
-          # Download gradle wrapper jar directly from GitHub
-          mkdir -p gradle/wrapper
-          curl -sL -o gradle/wrapper/gradle-wrapper.jar \
-            "https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradle/wrapper/gradle-wrapper.jar"
-          # Create gradle-wrapper.properties if missing
-          if [ ! -f gradle/wrapper/gradle-wrapper.properties ]; then
-            cat > gradle/wrapper/gradle-wrapper.properties << 'PROPS'
-distributionBase=GRADLE_USER_HOME
-distributionPath=wrapper/dists
-distributionUrl=https\://services.gradle.org/distributions/gradle-8.2-bin.zip
-zipStoreBase=GRADLE_USER_HOME
-zipStorePath=wrapper/dists
-PROPS
-          fi
-          # Create gradlew script
-          cat > gradlew << 'GRADlew'
-#!/bin/sh
-APP_HOME=$( cd "${0%/*}" > /dev/null && pwd -P ) || exit
-CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
-exec java -Xmx64m -Xms64m -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"
-GRADlew
-          chmod +x gradlew
-        fi
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: 8.2
     
     - name: Build Debug APK
-      run: |
-        ./gradlew assembleDebug --no-daemon --stacktrace
-      timeout-minutes: 15
+      run: gradle assembleDebug --no-daemon
+      timeout-minutes: 20
     
     - name: Upload Debug APK
       uses: actions/upload-artifact@v4
@@ -56,11 +35,10 @@ GRADlew
         name: debug-apk
         path: app/build/outputs/apk/debug/*.apk
         retention-days: 5
-      if: success()
     
-    - name: Build Release APK (unsigned)
-      run: ./gradlew assembleRelease --no-daemon || echo "Release build skipped"
-      timeout-minutes: 15
+    - name: Build Release APK
+      run: gradle assembleRelease --no-daemon || true
+      timeout-minutes: 20
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
@@ -68,4 +46,3 @@ GRADlew
         name: release-apk
         path: app/build/outputs/apk/release/*.apk
         retention-days: 5
-      if: always()
