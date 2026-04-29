@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">氢桌面增强版</string>
+    <string name="app_tagline">HYDRO DESKTOP · AI ENHANCED</string>
+
+    <!-- 主界面 -->
+    <string name="ai_assistant">AI 助手</string>
+    <string name="ai_assistant_desc">智能对话 · 随问随答</string>
+    <string name="voice_control">语音控制</string>
+    <string name="voice_control_desc">说出指令 · 解放双手</string>
+    <string name="navigation">导航</string>
+    <string name="nav_desc">地图导航 · 一键出发</string>
+    <string name="music">音乐</string>
+    <string name="music_desc">在线音乐 · 旅途伴侣</string>
+    <string name="media_desc">本地视频 · 大屏播放</string>
+    <string name="phone">电话</string>
+    <string name="media">视频</string>
+    <string name="all_apps">应用</string>
+    <string name="weather">天气</string>
+    <string name="settings">设置</string>
+
+    <!-- 底部 Dock -->
+    <string name="quick_nav">导航</string>
+    <string name="quick_music">音乐</string>
+    <string name="quick_phone">电话</string>
+    <string name="quick_ai">AI</string>
+    <string name="quick_settings">设置</string>
+
+    <!-- 问候语 -->
+    <string name="greeting_morning">早安</string>
+    <string name="greeting_noon">午安</string>
+    <string name="greeting_afternoon">下午好</string>
+    <string name="greeting_evening">晚上好</string>
+    <string name="greeting_night">夜深了</string>
+
+    <!-- 语音控制 -->
+    <string name="voice_activated">🎤 语音助手已启动</string>
+    <string name="voice_deactivated">语音助手已关闭</string>
+    <string name="voice_listening">正在聆听…</string>
+    <string name="voice_input_hint">请说出您的问题…</string>
+    <string name="voice_not_supported">设备不支持语音识别</string>
+
+    <!-- AI 助手 -->
+    <string name="ai_assistant_title">氢 AI 助手</string>
+    <string name="ai_welcome_message">你好！我是氢助手，你的车载AI助理。\n\n我可以帮你：\n• 回答问题和聊天\n• 导航建议\n• 音乐推荐\n• 天气查询\n• 车辆相关问题\n\n有什么可以帮你的吗？</string>
+    <string name="ai_input_hint">输入消息或按麦克风语音输入…</string>
+    <string name="ai_error_prefix">⚠️ </string>
+    <string name="send">发送</string>
+    <string name="clear">清除</string>
+    <string name="back">返回</string>
+    <string name="voice_input">语音输入</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="ai_settings_section">🤖 AI 模型配置</string>
+    <string name="api_url">API 地址</string>
+    <string name="api_key">API 密钥</string>
+    <string name="api_key_hint">输入 API Key（可选）</string>
+    <string name="model_name">模型名称</string>
+    <string name="system_prompt">系统提示词</string>
+    <string name="system_prompt_hint">自定义 AI 助手的角色和行为…</string>
+    <string name="test_connection">测试连接</string>
+    <string name="save">保存</string>
+    <string name="settings_saved">✅ 设置已保存</string>
+    <string name="testing_connection">正在测试连接…</string>
+    <string name="connection_success">连接成功</string>
+    <string name="connection_failed">连接失败</string>
+
+    <string name="voice_settings_section">🎤 语音设置</string>
+    <string name="wake_word">唤醒词</string>
+    <string name="voice_wake_enabled">语音唤醒</string>
+    <string name="tts_enabled">语音播报 (TTS)</string>
+
+    <string name="system_settings_section">⚙️ 系统设置</string>
+    <string name="auto_start">开机自启</string>
+    <string name="brightness">屏幕亮度</string>
+    <string name="volume">媒体音量</string>
+
+    <string name="no_navigation_app">未找到导航应用</string>
+    <string name="no_music_app">未找到音乐应用</string>
+    <string name="launch_failed">启动应用失败</string>
+
+    <string name="version_info">氢桌面增强版 v2.0.0\nAI + 语音 + 视频</string>
+
+    <!-- 视频播放器 -->
+    <string name="video_list_title">本地视频</string>
+    <string name="video_empty">未找到视频文件</string>
+    <string name="video_permission_denied">需要存储权限才能浏览视频</string>
+    <string name="video_play">播放</string>
+    <string name="video_pause">暂停</string>
+    <string name="video_fullscreen">全屏</string>
+    <string name="video_no_uri">未指定视频文件</string>
+    <string name="video_play_error">视频播放失败</string>
+    <string name="video_desc">本地视频 · 大屏播放</string>
+</resources>

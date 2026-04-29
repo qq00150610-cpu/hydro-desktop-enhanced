@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- 视频播放区 -->
+    <com.hydrodesktop.video.VideoPlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <!-- 加载动画 -->
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/primary"
+        android:visibility="gone" />
+
+    <!-- 控制层叠加 -->
+    <FrameLayout
+        android:id="@+id/control_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 顶部标题栏 -->
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#88000000"
+            android:paddingHorizontal="16dp"
+            android:layout_gravity="top">
+
+            <ImageButton
+                android:id="@+id/btn_video_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back" />
+
+            <TextView
+                android:id="@+id/tv_video_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <ImageButton
+                android:id="@+id/btn_fullscreen"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_fullscreen"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/video_fullscreen" />
+        </LinearLayout>
+
+        <!-- 中央播放按钮 -->
+        <ImageButton
+            android:id="@+id/btn_play_pause_center"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_play_large"
+            android:background="@drawable/btn_play_center_bg"
+            android:contentDescription="@string/video_play"
+            android:visibility="gone" />
+
+        <!-- 底部控制栏 -->
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#88000000"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:layout_gravity="bottom">
+
+            <!-- 进度条 -->
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="4dp"
+                android:progressTint="@color/primary"
+                android:thumbTint="@color/primary"
+                android:progressBackgroundTint="#44FFFFFF" />
+
+            <!-- 时间 + 控制按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/tv_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / "
+                    android:textColor="#66FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!-- 播放/暂停按钮 -->
+                <ImageButton
+                    android:id="@+id/btn_play_pause"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/ic_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/video_play" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主色调 -->
+    <color name="primary">#4FC3F7</color>
+    <color name="primary_dark">#0277BD</color>
+    <color name="primary_light">#B3E5FC</color>
+    <color name="accent">#FF6E40</color>
+    <color name="accent_light">#FFAB91</color>
+
+    <!-- 背景 -->
+    <color name="bg_deep">#0B0D1A</color>
+    <color name="bg_dark">#111328</color>
+    <color name="bg_surface">#1A1D3A</color>
+    <color name="bg_card">#222550</color>
+    <color name="bg_card_light">#2A2D5A</color>
+
+    <!-- 文字 -->
+    <color name="text_primary">#F0F0F5</color>
+    <color name="text_secondary">#A0A3C0</color>
+    <color name="text_hint">#5A5D80</color>
+    <color name="text_on_dark">#E8E8F0</color>
+
+    <!-- 功能卡片渐变色 -->
+    <color name="card_ai_start">#1A237E</color>
+    <color name="card_ai_end">#4A148C</color>
+    <color name="card_ai_icon">#B388FF</color>
+
+    <color name="card_voice_start">#004D40</color>
+    <color name="card_voice_end">#00695C</color>
+    <color name="card_voice_icon">#64FFDA</color>
+
+    <color name="card_nav_start">#BF360C</color>
+    <color name="card_nav_end">#E65100</color>
+    <color name="card_nav_icon">#FFAB40</color>
+
+    <color name="card_music_start">#4A148C</color>
+    <color name="card_music_end">#7B1FA2</color>
+    <color name="card_music_icon">#EA80FC</color>
+
+    <color name="card_phone_start">#1B5E20</color>
+    <color name="card_phone_end">#2E7D32</color>
+    <color name="card_phone_icon">#69F0AE</color>
+
+    <color name="card_weather_start">#0D47A1</color>
+    <color name="card_weather_end">#1565C0</color>
+    <color name="card_weather_icon">#82B1FF</color>
+
+    <color name="card_media_start">#311B92</color>
+    <color name="card_media_end">#4527A0</color>
+    <color name="card_media_icon">#B39DDB</color>
+
+    <color name="card_settings_start">#263238</color>
+    <color name="card_settings_end">#37474F</color>
+    <color name="card_settings_icon">#90A4AE</color>
+
+    <!-- 状态色 -->
+    <color name="success">#00E676</color>
+    <color name="warning">#FFD740</color>
+    <color name="error">#FF5252</color>
+    <color name="voice_active">#FF1744</color>
+    <color name="voice_pulse">#33FF1744</color>
+
+    <!-- 底部栏 -->
+    <color name="dock_bg">#E6111328</color>
+    <color name="dock_divider">#1A4FC3F7</color>
+</resources>
