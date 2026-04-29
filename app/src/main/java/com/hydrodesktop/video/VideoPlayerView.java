@@ -42,9 +42,12 @@ public class VideoPlayerView extends VideoView {
             if (onCompletionListener != null) onCompletionListener.onCompletion(mp);
         });
 
-        super.setOnErrorListener (mp, what, extra -> {
-            if (onErrorListener != null) return onErrorListener.onError(mp, what, extra);
-            return true;
+        super.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mp, int what, int extra) {
+                if (onErrorListener != null) return onErrorListener.onError(mp, what, extra);
+                return true;
+            }
         });
 
         super.setOnInfoListener((mp, what, extra) -> {

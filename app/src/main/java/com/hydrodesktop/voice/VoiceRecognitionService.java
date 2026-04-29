@@ -385,7 +385,7 @@ public class VoiceRecognitionService extends Service {
      */
     private void sendMediaCommand(String command) {
         // 使用 AudioManager 的媒体按键模拟
-        android.media.AudioManager am = (android.media.audioManager) getSystemService(Context.AUDIO_SERVICE);
+        android.media.AudioManager am = (android.media.AudioManager) getSystemService(Context.AUDIO_SERVICE);
         int keyCode;
         switch (command) {
             case "play":

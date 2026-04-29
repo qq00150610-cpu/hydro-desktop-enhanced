@@ -37,7 +37,7 @@ public class AIAssistantActivity extends AppCompatActivity {
     private ImageButton btnBack;
     private ProgressBar progressBar;
     private TextView tvTitle;
-    private ScrollView scrollView;
+    // private ScrollView scrollView; // unused with RecyclerView
 
     private ChatAdapter chatAdapter;
     private List<ChatMessage> messages;
@@ -66,7 +66,7 @@ public class AIAssistantActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.btn_back);
         progressBar = findViewById(R.id.progress_bar);
         tvTitle = findViewById(R.id.tv_title);
-        scrollView = findViewById(R.id.scroll_view);
+        // scrollView = findViewById(R.id.scroll_view);
 
         tvTitle.setText(R.string.ai_assistant_title);
 
